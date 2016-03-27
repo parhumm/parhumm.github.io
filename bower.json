@@ -1,0 +1,17 @@
+{
+  "name": "parhum-website",
+  "homepage": "http://parhum.net",
+  "authors": [
+    "Parhum Khoshbakht <parhum.kh@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    
+  }
+}

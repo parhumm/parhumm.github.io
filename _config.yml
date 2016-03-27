@@ -1,19 +1,42 @@
-#
-# This file contains configuration flags to customize your site
-#
+# Site settings
+title: Parhum Khoshbakht
+email: parhum.kh@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Creative focus on simplicity and things that appear on screens
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://parhum.net" # the base hostname & protocol for your site
 
-# Name of your site (displayed in the header)
-name: Parhum Khoshbakht
 
-# Short bio or description (displayed in the header)
-description: Interaction Designer from Tehran
+# Build settings
+markdown: kramdown
+highlighter: rouge
+encoding: utf-8
+permalink: /:categories/:title
+exclude: ["node_modules", "assets/scss", "assets/vendor", "gulpfile.js", "package.json", "bower.json", "LICENSE", "Gemfile", "Gemfile.lock"]
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/949500?v=3&s=460
 
-#
-# Flags below are optional
-#
+# Menu Data
+navigation:
+- text: Portfolio
+  url: /
+- text: About
+  url: /about/
+- text: Blog
+  url: /blog/
+- text: Hire Us
+  url: /contact/
+
+# Menu Data - Farsi
+navigation_fa:
+- text: خدمات ما
+  url: /fa/
+- text: درباره ما
+  url: /fa/about/
+- text: وبلاگ
+  url: /fa/blog/
+- text: تماس با ما
+  url: /fa/contact/
+
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -35,52 +58,3 @@ footer-links:
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
 disqus: parhumm
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-10779984-14
-
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: http://parhum.net
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: "http://parhumm.github.io"
-
-#
-# !! You don't need to change any of the configuration flags below !!
-#
-
-permalink: /:title/
-
-# The release of Jekyll Now that you're using
-version: v1.2.0
-
-# Jekyll 3 now only supports Kramdown for Markdown
-kramdown:
-  # Use GitHub flavored markdown, including triple backtick fenced code blocks
-  input: GFM
-  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    # Use existing pygments syntax highlighting css
-    css_class: 'highlight'
-
-# Set the Sass partials directory, as we're using @imports
-sass:
-  style: :expanded # You might prefer to minify using :compressed
-
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-
-# Exclude these files from your production _site
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME

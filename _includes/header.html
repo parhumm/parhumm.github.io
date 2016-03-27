@@ -1,0 +1,16 @@
+<div class="switch-lang">
+	<a class="lang__eng active" href="/">En</a>
+	<a class="lang__fa" href="/fa/">Fa</a>
+</div>
+
+<a href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+<ul class="navigation">
+	{% assign url = page.url|remove:'index.html' %}
+
+	{% for link in site.navigation %}
+		<li {% if url == link.url %}class="active"{% endif %}>
+			<a href="{{link.url}}" title="{{link.text}}">{{link.text}}</a>
+		</li>
+	{% endfor %}
+</ul>
