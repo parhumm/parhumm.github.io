@@ -47,6 +47,7 @@ a {
 	transition: all 100ms ease-out;
 	text-decoration: none;
 	color: map-get($colors, mainLink);
+	background: #fff;
 
 	&:hover {
 		background-color: map-get($colors, mainLink);

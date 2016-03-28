@@ -61,30 +61,21 @@
 			right: 40px;
 		}
 
-		.titles {
-			display: block;
-			margin-bottom: 10px;
-			font-size: 30px;
-		}
-
 		.title {
 			font-weight: bold;
-			font-size: 50px;
+			font-size: 28px;
 			display: block;
+			margin-bottom: 0;
 		}
 
 		.subtitle {
 			display: block;
-			font-size: 20px;
-			color: lighten(#565656, 10%);
-			margin-bottom: 25px;
-			margin-top: -5px;
+			font-size: 18px;
+			margin-bottom: map-get($gutters, 'base');
 		}
 
 		.desc {
-			font-size: 17px;
 			display: block;
-			line-height: 1.5;
 		}
 
 		&:hover {

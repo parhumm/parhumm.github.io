@@ -386,7 +386,8 @@ a {
   padding-left: 3px;
   transition: all 100ms ease-out;
   text-decoration: none;
-  color: #C2185B; }
+  color: #C2185B;
+  background: #fff; }
   a:hover {
     background-color: #C2185B;
     color: #fff; }
@@ -552,24 +553,17 @@ body {
     top: 40px;
     left: 40px;
     right: 40px; }
-  .portfolio__item .titles {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 30px; }
   .portfolio__item .title {
     font-weight: bold;
-    font-size: 50px;
-    display: block; }
+    font-size: 28px;
+    display: block;
+    margin-bottom: 0; }
   .portfolio__item .subtitle {
     display: block;
-    font-size: 20px;
-    color: #707070;
-    margin-bottom: 25px;
-    margin-top: -5px; }
+    font-size: 18px;
+    margin-bottom: 15px; }
   .portfolio__item .desc {
-    font-size: 17px;
-    display: block;
-    line-height: 1.5; }
+    display: block; }
   .portfolio__item:hover .layer,
   .portfolio__item:hover .info {
     opacity: 1; }
