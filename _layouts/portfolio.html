@@ -1,24 +1,20 @@
 ---
 layout: default
+class: single-portfolio
 ---
-{% if page.show_title == null %}
-<div class="title">
-    <h1 class="title__main">{{ page.title }}</h1>
-	{% if page.short_desc %}
-		<h2 class="title__sub">{{ page.short_desc }}</h2>
-	{% endif %}
-</div>
-{% endif %}
 
-<div class="content content__portfolio">
-	<div class="row">
-		<div class="small-12 columns test">
-			{{ content }}
+<div class="container">
+	{% if page.show_title == null %}
+		<div class="title">
+		    <h1 class="title__main">{{ page.title }}</h1>
+
+			{% if page.short_desc %}
+				<h2 class="title__sub">{{ page.short_desc }}</h2>
+			{% endif %}
 		</div>
-		<div class="small-12 columns">
-			<div class="text-center">
-				<a class="btn" href="/">Back to Portfolio</a>
-			</div>
-		</div>
-	</div>
+	{% endif %}
+
+	{{ content }}
+
+	<a class="btn" href="/">Back to Portfolio</a>
 </div>

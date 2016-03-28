@@ -17,7 +17,10 @@
 // @import "svg-icons";
 
 // Layout
-@import "navigation";
+@import "grid",
+		"navigation";
 
 // Pages
-@import "pages/home";
+@import "pages/home",
+		"pages/portfolio",
+		"pages/single-portfolio";

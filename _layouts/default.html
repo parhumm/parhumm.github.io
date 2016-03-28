@@ -3,8 +3,6 @@
   {% include head.html %}
 
   <body class="{% if page.lang == "fa" %}page-fa{% else %}page-en{% endif %} page-{{ page.class }}">
-    {% include navigation.html %}
-
     {% include header.html %}
 		{{ content }}
     {% include footer.html %}

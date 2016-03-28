@@ -1,18 +1,8 @@
 <div class="navigation">
-	<div class="item is-top">
-		<div class="item__border"></div>
-		<a class="item__content" href="#">top</a>
-	</div>
-	<div class="item is-bottom">
-		<div class="item__border"></div>
-		<a class="item__content" href="#">bottom</a>
-	</div>
-	<div class="item is-right">
-		<div class="item__border"></div>
-		<a class="item__content" href="#">right</a>
-	</div>
-	<div class="item is-left">
-		<div class="item__border"></div>
-		<a class="item__content" href="#">left</a>
-	</div>
+	{% for link in page.navigation %}
+		<div class="item is-{{link.position}}">
+			<div class="item__border"></div>
+			{% if link.text %}<a class="item__content" href="{{link.url}}">{{link.text}}</a>{% endif %}
+		</div>
+	{% endfor %}
 </div>

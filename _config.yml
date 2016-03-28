@@ -15,16 +15,6 @@ permalink: /:categories/:title
 exclude: ["node_modules", "assets/scss", "assets/vendor", "gulpfile.js", "package.json", "bower.json", "LICENSE", "Gemfile", "Gemfile.lock"]
 
 
-# Menu Data
-navigation:
-- text: Home
-  url: /
-- text: Portfolio
-  url: /portfolio/
-- text: Blog
-  url: /blog/
-
-
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
