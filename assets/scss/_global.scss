@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
 	height: 100%;
@@ -39,6 +43,8 @@ body {
 
 .container {
 	padding: (map-get($gutters, 'base') + map-get($navigation, size));
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 .right-side {
@@ -47,4 +53,8 @@ body {
 
 .left-side {
 	float: left;
+}
+
+.is-dark {
+	
 }

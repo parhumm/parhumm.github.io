@@ -2,7 +2,7 @@
 <html lang="{% if page.lang == "fa" %}fa-IR{% else %}en-US{% endif %}" dir="{% if page.lang == "fa" %}rtl{% else %}ltr{% endif %}">
   {% include head.html %}
 
-  <body class="{% if page.lang == "fa" %}page-fa{% else %}page-en{% endif %} page-{{ page.class }}">
+  <body class="{% if page.lang == "fa" %}is-fa{% else %}is-en{% endif %} page-{{ page.class }}">
     {% include header.html %}
 		{{ content }}
     {% include footer.html %}

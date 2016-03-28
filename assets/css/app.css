@@ -372,7 +372,7 @@ body {
   color: #747980;
   font-family: "Open Sans";
   font-size: 14px; }
-  body.page-fa {
+  body.is-fa {
     font-family: "Tahoma";
     font-size: 14px; }
 
@@ -397,6 +397,9 @@ a {
 
 .container a {
   color: #2476BC; }
+
+* {
+  box-sizing: border-box; }
 
 html,
 body {
@@ -426,7 +429,9 @@ body {
   clear: both; }
 
 .container {
-  padding: 45px; }
+  padding: 45px;
+  max-width: 960px;
+  margin: 0 auto; }
 
 .right-side {
   float: right; }
@@ -505,6 +510,16 @@ body {
   font-size: 16px;
   font-weight: normal;
   color: #747980; }
+
+.page-portfolio .right-side,
+.page-portfolio .left-side {
+  width: 50%; }
+
+.page-portfolio .right-side {
+  padding-left: 7.5px; }
+
+.page-portfolio .left-side {
+  padding-right: 7.5px; }
 
 .portfolio__item,
 .hover {

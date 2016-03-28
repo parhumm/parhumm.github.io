@@ -13,7 +13,7 @@ body {
 	font-family: map-get($enTypography, 'font-family');
 	font-size: map-get($enTypography, 'font-size');
 
-	&.page-fa {
+	&.is-fa {
 		font-family: map-get($faTypography, 'font-family');
 		font-size: map-get($enTypography, 'font-size');
 	}

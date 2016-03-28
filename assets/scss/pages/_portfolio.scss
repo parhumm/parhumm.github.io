@@ -1,5 +1,17 @@
 .page-portfolio {
 
+	.right-side,
+	.left-side {
+		width: 50%;
+	}
+
+	.right-side {
+		padding-left: (map-get($gutters, 'base') / 2);
+	}
+
+	.left-side {
+		padding-right: (map-get($gutters, 'base') / 2);
+	}
 }
 
 	.portfolio__item,
@@ -9,7 +21,7 @@
 	}
 
 	.portfolio__item {
-		margin-top: 15px;
+		margin-top: map-get($gutters, 'base');
 
 		a {
 			display: block;
