@@ -1,11 +1,13 @@
 ---
 layout: default
-title:  "Blog"
+title:  "وبلاگ"
+class: blog
+lang: fa
 ---
 <div class="title">
     <h1 class="title__main">{{ page.title }}</h1>
-    {% if page.title_sub %}
-	    <h2 class="title__sub subheader">{{ page.title_sub }}</h2>
+    {% if page.short_desc %}
+	    <h2 class="title__sub subheader">{{ page.short_desc }}</h2>
     {% endif %}
 </div>
 {% for post in site.categories.blog %}{% unless post.categories contains 'fa' %} 

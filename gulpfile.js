@@ -63,7 +63,7 @@ gulp.task('browser-sync', ['sass', 'js', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src(['assets/scss/style.scss', 'assets/scss/style-rtl.scss'])
+    return gulp.src(['assets/scss/**.*'])
         .pipe(sass({
             includePaths: ['scss'],
             errLogToConsole: true,
@@ -71,6 +71,14 @@ gulp.task('sass', function () {
         }))
 		//.pipe(minifyCSS())
         .pipe(gulp.dest('assets/css'));
+});
+
+/**
+ * Copy Vendor Files to main folders.
+ */
+gulp.task('vendoreMove', function() {
+  gulp.src('assets/vendor/normalize-scss/_normalize.scss')
+    .pipe(gulp.dest('assets/scss/vendor/'))
 });
 
 /**
@@ -91,7 +99,7 @@ gulp.task('js', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('./assets/scss/**/*.scss', ['sass', 'jekyll-rebuild']);
-    gulp.watch(['*.html', '_layouts/*.html', 'blog/**/*.*', 'fa/**/*.md', 'fa/**/*.html', 'portfolio/*.md'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', 'blog/**/*.*', 'portfolio/*.md'], ['jekyll-rebuild']);
     gulp.watch('assets/js/app.js', ['js', 'jekyll-rebuild']);
 });
 
@@ -99,4 +107,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'vendoreMove', 'watch']);

@@ -1,0 +1,86 @@
+//
+// Typography Styles
+// Color, Size, Weight and etc.
+//
+
+
+//
+// Global Styles
+//
+
+body {
+	color: map-get($colors, 'paragraph');
+	font-family: map-get($enTypography, 'font-family');
+	font-size: map-get($enTypography, 'font-size');
+
+	&.page-fa {
+		font-family: map-get($faTypography, 'font-family');
+		font-size: map-get($enTypography, 'font-size');
+	}
+}
+
+
+//
+// Styling heading: h1-h6
+//
+
+%headingStyles {
+	color: map-get($colors, 'heading');
+	margin-top: 0;
+	margin-bottom: map-get($gutters, 'base');
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		@extend %headingStyles;
+	}
+}
+
+
+//
+// Styling Anchors
+//
+
+a {
+	padding-right: 3px;
+	padding-left: 3px;
+	transition: all 100ms ease-out;
+	text-decoration: none;
+	color: map-get($colors, mainLink);
+
+	&:hover {
+		background-color: map-get($colors, mainLink);
+		color: #fff;
+	}
+
+	// &.is-informative {
+	// 	padding-bottom: 3px;
+	// 	color: map-get($colors, paragraph);
+	// 	border-bottom: solid 2px map-get($colors, mainLink);
+	// }
+}	
+
+%containerAnchor {
+	background-color: map-get($colors, innerLink);
+	color: #fff;
+}
+
+.container {
+
+	a {
+		color: map-get($colors, innerLink);
+
+		&:hover {
+			@extend %containerAnchor;
+		}
+		
+		// &.is-informative {
+		// 	color: map-get($colors, paragraph);
+		// 	border-color: rgba(map-get($colors, innerLink), 0.3);
+
+		// 	&:hover {
+		// 		@extend %containerAnchor;
+		// 	}
+		// }
+	}	
+}

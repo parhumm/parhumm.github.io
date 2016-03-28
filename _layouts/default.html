@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="{% if page.lang == "fa" %}fa-IR{% else %}en-US{% endif %}" dir="{% if page.lang == "fa" %}rtl{% else %}ltr{% endif %}">
   {% include head.html %}
 
-  <body>
+  <body class="{% if page.lang == "fa" %}page-fa{% else %}page-en{% endif %} page-{{ page.class }}">
+    {% include navigation.html %}
+
     {% include header.html %}
-		<div class="content">
-			{{ content }}
-		</div>
+		{{ content }}
     {% include footer.html %}
   </body>
 </html>

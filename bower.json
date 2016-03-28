@@ -12,6 +12,6 @@
     "assets/vendor"
   ],
   "dependencies": {
-    
+    "normalize-scss": ""
   }
 }

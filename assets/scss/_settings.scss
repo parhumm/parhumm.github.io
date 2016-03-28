@@ -1,0 +1,52 @@
+//
+// Sass Settings
+//
+
+
+//
+// Typogrpahy Settings
+//
+
+// English Typography
+$enTypography:(
+	'font-family': 'Open Sans',
+	'font-size': 14px,
+);
+
+// Persian Typography
+$faTypography:(
+	'font-family': 'Tahoma',
+	'font-size': 12px,
+);
+
+
+//
+// Color Settings
+//
+$colors:(
+	// Text Colors
+	'heading': #17181A,
+	'paragraph': #747980,
+
+	// Links Colors
+	'mainLink': #C2185B,
+	'innerLink': #2476BC,
+);
+
+
+//
+// Navigation Settings
+//
+$navigation:(
+	'border-color': #f0f0f0,
+	'bg-color': #fafafa,
+	'size': 30px,
+);
+
+
+//
+// Gutter Sizes
+//
+$gutters:(
+	'base': 15px,
+);

@@ -17,25 +17,12 @@ exclude: ["node_modules", "assets/scss", "assets/vendor", "gulpfile.js", "packag
 
 # Menu Data
 navigation:
-- text: Portfolio
+- text: Home
   url: /
-- text: About
-  url: /about/
+- text: Portfolio
+  url: /portfolio/
 - text: Blog
   url: /blog/
-- text: Hire Us
-  url: /contact/
-
-# Menu Data - Farsi
-navigation_fa:
-- text: خدمات ما
-  url: /fa/
-- text: درباره ما
-  url: /fa/about/
-- text: وبلاگ
-  url: /fa/blog/
-- text: تماس با ما
-  url: /fa/contact/
 
 
 # Includes an icon in the footer for each username you enter

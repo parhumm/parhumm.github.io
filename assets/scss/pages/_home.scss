@@ -1,0 +1,33 @@
+.page-home {
+	
+	.container {
+		@extend %vertical-center;
+	}
+}
+
+	.logo {
+
+		&__type {
+			font-size: 24px;
+			margin-bottom: (map-get($gutters, 'base') / 2);
+			
+			a {
+				color: map-get($colors, 'heading');
+
+				&:hover {
+					background: transparent;
+					color: inherit;
+				}
+			}
+		}
+
+		&__desc {
+			font-size: 16px;
+			font-weight: normal;
+			color: map-get($colors, 'paragraph');
+		}
+	}
+
+		.about-link {
+			
+		}

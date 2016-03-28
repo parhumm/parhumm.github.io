@@ -1,0 +1,85 @@
+.navigation {
+	@extend %vertical-center;
+
+	background: map-get($navigation, bg-color);
+	position: fixed;
+	text-align: center;
+
+	.border	{
+		position: absolute;
+		border-width: 1px;
+		border-color: map-get($navigation, border-color);
+	}
+	
+	&.is-top,
+	&.is-bottom {
+		height: map-get($navigation, size);
+		width: 100%;
+
+		.border {
+			right: 0;
+			left: 0;
+			margin: 0 map-get($navigation, size);
+		}
+	}
+
+	&.is-top {
+		top: 0;
+
+		.border {
+			bottom: 0;
+			border-bottom-style: solid;
+		}
+	}
+	
+	&.is-bottom {
+		bottom: 0;
+
+		.border {
+			top: 0;
+			border-top-style: solid;
+		}
+	}
+	
+	&.is-right,
+	&.is-left {
+		width: map-get($navigation, size);
+		height: 100%;
+
+		.border {
+			top: 0;
+			bottom: 0;
+			margin: map-get($navigation, size) 0;
+		}
+	}
+
+	&.is-right {
+		right: 0;
+
+		.link {
+			transform: rotate(-90deg);
+		}
+
+		.border {
+			left: 0;
+			border-left-style: solid;
+		}
+	}
+
+	&.is-left {
+		left: 0;
+
+		.link {
+			transform: rotate(90deg);
+		}
+
+		.border {
+			right: 0;
+			border-right-style: solid;
+		}
+	}
+
+	.link {
+
+	}
+}
