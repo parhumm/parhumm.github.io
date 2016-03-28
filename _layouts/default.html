@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang == "fa" %}fa-IR{% else %}en-US{% endif %}" dir="{% if page.lang == "fa" %}rtl{% else %}ltr{% endif %}">
+<html lang="{% if page.lang == "fa" %}fa-IR{% else %}en-US{% endif %}" dir="{% if page.lang == "fa" %}rtl{% else %}ltr{% endif %}" class="{% if page.lang == "fa" %}is-fa{% else %}is-en{% endif %} page-{{ page.class }}">
   {% include head.html %}
 
-  <body class="{% if page.lang == "fa" %}is-fa{% else %}is-en{% endif %} page-{{ page.class }}">
-    {% include header.html %}
-		{{ content }}
+  <body>
+	{{ content }}
+    
     {% include footer.html %}
   </body>
 </html>

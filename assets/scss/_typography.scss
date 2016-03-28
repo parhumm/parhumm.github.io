@@ -8,15 +8,28 @@
 // Global Styles
 //
 
+.is-fa {
+	body {
+		font-family: map-get($faTypography, 'font-family');
+		font-size: map-get($enTypography, 'font-size');
+	}
+}
+
+.is-dark {
+	
+	body {
+		color: #fff;
+	}
+
+	a {
+		background: #17181A;
+	}
+}
+
 body {
 	color: map-get($colors, 'paragraph');
 	font-family: map-get($enTypography, 'font-family');
 	font-size: map-get($enTypography, 'font-size');
-
-	&.is-fa {
-		font-family: map-get($faTypography, 'font-family');
-		font-size: map-get($enTypography, 'font-size');
-	}
 }
 
 
@@ -30,9 +43,20 @@ body {
 	margin-bottom: map-get($gutters, 'base');
 }
 
+%darkHeadingStyles {
+	color: #fff;
+}
+
 @for $i from 1 through 6 {
 	h#{$i} {
 		@extend %headingStyles;
+	}
+
+	.is-dark {
+
+		h#{$i} {
+			@extend %darkHeadingStyles;
+		}
 	}
 }
 

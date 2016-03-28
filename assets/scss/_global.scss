@@ -2,13 +2,16 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 html {
 	background: map-get($navigation, bg-color);
+
+	&.is-dark {
+		background: map-get($navigation, dark-bg-color);
+
+		body {
+			background: #17181A;
+		}
+	}
 }
 
 body {

@@ -1,4 +1,9 @@
 .page-home {
+
+	&,
+	body {
+		height: 100%;
+	}
 	
 	.container {
 		@extend %vertical-center;

@@ -107,3 +107,17 @@
 		}
 	}
 }
+
+.is-dark {
+
+	.navigation {
+	
+		.item {
+			border-color: map-get($navigation, dark-bg-color);
+			
+			.item__border {
+				border-color: map-get($navigation, dark-border-color);
+			}
+		}
+	}
+}
