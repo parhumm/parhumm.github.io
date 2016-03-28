@@ -473,7 +473,7 @@ body {
     .navigation .item.is-bottom .item__border {
       bottom: 0; }
     .navigation .item.is-bottom .item__content {
-      bottom: -5px; }
+      top: -10px; }
   .navigation .item.is-right, .navigation .item.is-left {
     width: 30px;
     height: 100%; }
