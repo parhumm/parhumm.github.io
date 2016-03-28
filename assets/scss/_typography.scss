@@ -52,12 +52,6 @@ a {
 		background-color: map-get($colors, mainLink);
 		color: #fff;
 	}
-
-	// &.is-informative {
-	// 	padding-bottom: 3px;
-	// 	color: map-get($colors, paragraph);
-	// 	border-bottom: solid 2px map-get($colors, mainLink);
-	// }
 }	
 
 %containerAnchor {
@@ -73,14 +67,5 @@ a {
 		&:hover {
 			@extend %containerAnchor;
 		}
-		
-		// &.is-informative {
-		// 	color: map-get($colors, paragraph);
-		// 	border-color: rgba(map-get($colors, innerLink), 0.3);
-
-		// 	&:hover {
-		// 		@extend %containerAnchor;
-		// 	}
-		// }
 	}	
 }

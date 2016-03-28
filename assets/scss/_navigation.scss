@@ -1,85 +1,109 @@
 .navigation {
-	@extend %vertical-center;
-
-	background: map-get($navigation, bg-color);
-	position: fixed;
-	text-align: center;
-
-	.border	{
-		position: absolute;
-		border-width: 1px;
-		border-color: map-get($navigation, border-color);
-	}
 	
-	&.is-top,
-	&.is-bottom {
-		height: map-get($navigation, size);
-		width: 100%;
+	.item {
+		border-width: map-get($gutters, 'base');
+		border-color: map-get($navigation, bg-color);
+		position: fixed;
+		text-align: center;
+		z-index: z('navigationItem');
 
-		.border {
-			right: 0;
-			left: 0;
-			margin: 0 map-get($navigation, size);
+		// &:hover {
+		// 	background: transparent;
+		// 	color: map-get($colors, mainLink);
+		// 	border-color: map-get($colors, mainLink);
+		// 	z-index: (z('navigationItem') + 1);
+		// }
+		
+		.item__content {
+			position: relative;
 		}
-	}
 
-	&.is-top {
-		top: 0;
-
-		.border {
-			bottom: 0;
-			border-bottom-style: solid;
+		.item__border {
+			position: absolute;
+			border: 1px solid map-get($navigation, border-color);
+			border-bottom: 0 none;
+			border-right: 0 none;
 		}
-	}
-	
-	&.is-bottom {
-		bottom: 0;
 
-		.border {
+		&.is-top,
+		&.is-bottom {
+			height: map-get($navigation, size);
+			width: 100%;
+
+			.item__border {
+				right: 0;
+				left: 0;
+				margin: 0 map-get($gutters, 'base');
+			}
+		}
+
+		&.is-top {
 			top: 0;
 			border-top-style: solid;
-		}
-	}
-	
-	&.is-right,
-	&.is-left {
-		width: map-get($navigation, size);
-		height: 100%;
 
-		.border {
-			top: 0;
+			.item__border {
+				top: 0;
+			}
+
+			.item__content {
+				bottom: -5px;
+			}
+		}
+		
+		&.is-bottom {
 			bottom: 0;
-			margin: map-get($navigation, size) 0;
+			border-bottom-style: solid;
+
+			.item__border {
+				bottom: 0;
+			}
+
+			.item__content {
+				bottom: -5px;
+			}
 		}
-	}
+		
 
-	&.is-right {
-		right: 0;
+		&.is-right,
+		&.is-left {
+			@extend %vertical-center;
 
-		.link {
-			transform: rotate(-90deg);
+			width: map-get($navigation, size);
+			height: 100%;
+
+			.item__border {
+				top: 0;
+				bottom: 0;
+				margin: map-get($gutters, 'base') 0;
+			}
 		}
 
-		.border {
-			left: 0;
-			border-left-style: solid;
-		}
-	}
-
-	&.is-left {
-		left: 0;
-
-		.link {
-			transform: rotate(90deg);
-		}
-
-		.border {
+		&.is-right {
 			right: 0;
 			border-right-style: solid;
+
+			.item__content {
+				transform: rotate(-90deg);
+				right: 5px;
+			}
+
+			.item__border {
+				right: 0;
+			}
 		}
-	}
 
-	.link {
+		&.is-left {
+			left: 0;
+			border-left-style: solid;
 
+			.item__content {
+				transform: rotate(90deg);
+				left: 5px;
+			}
+
+			.item__border {
+				left: 0;
+			}
+		}
 	}
 }

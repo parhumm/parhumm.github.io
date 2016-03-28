@@ -50,3 +50,11 @@ $navigation:(
 $gutters:(
 	'base': 15px,
 );
+
+
+//
+// z-index
+//
+$z-index:(
+	'navigationItem': 1000, // Most z-index in site
+);
